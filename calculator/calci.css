@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgba(158, 2, 57, 0.916); 
+    font-family: 'Times New Roman';
+    outline: none;
+    
+}
+.Container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.Calculator{
+    background-color: rgb(9, 65, 108);        
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: inset 5px 5px 12px #e08787, 5px 5px 12px rgba(0, 0, 0, 16);
+    display: grid;
+    grid-template-columns: repeat(4, 68px);
+    background-image: url(capture.jpg);
+}
+input{
+    color: rgb(10, 10, 10);
+    grid-column: span 4;
+    height: 70px;
+    width: 260px;
+    background-color: rgb(211, 242, 248);
+    box-shadow: inset -5px -5px 12px  #fac8c8,
+                        inset 5px 5px 12px rgba(0, 0, 0,0.16);
+    border: none;
+    border-radius: 20px;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: right;
+    padding-right: 20px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    cursor: default;
+
+}
+button{
+    
+    height: 60px;
+    width: 60px;
+    margin-top: 9px;
+    background-color: rgb(225, 128, 68);
+    box-shadow: inset -5px -5px 12px  #ffffff,
+                        inset 5px 5px 12px rgba(0, 0, 0,0.16);
+    border: none;
+    border-radius: 30%;
+    color: rgb(5, 5, 5);
+    font-size: medium;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.equal{
+    width: 115px;
+    border-radius: 40px;
+    margin-top: 9px;
+    margin-left: 10px;
+    color:rgb(12, 12, 12)
+}
+.inner-shadow{
+    box-shadow: var(--inner-shadow);
+}
+
+.hover-in-shadow{
+    position: relative;
+    z-index: 1;
+    color:rgb(13, 13, 14);
+}
+.hover-in-shadow:hover{
+    box-shadow: var(--outer-shadow-0);
+}
+.hover-in-shadow::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+    z-index: -1;
+    
+}
+.btn-1::after{
+    border-radius: 40px;
+}
+.hover-in-shadow:hover::after{
+    box-shadow: var(--inner-shadow);
+}
